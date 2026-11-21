@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@500;600;700;800&display=swap');
+
+:root {
+  --ink: #172033;
+  --muted: #5f6b80;
+  --purple: #6048d8;
+  --line: #e5e8f0;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: var(--ink);
+  font-family: 'DM Sans', sans-serif;
+  background: radial-gradient(circle at 10% 8%, #e9e5ff 0, transparent 27%),
+              radial-gradient(circle at 92% 88%, #dff6f0 0, transparent 25%), #f7f8fc;
+}
+.container { width: min(1120px, 92%); margin: auto; padding: 64px 0 30px; }
+.intro { text-align: center; margin-bottom: 42px; }
+.eyebrow { color: var(--purple); font-size: 11px; font-weight: 800; letter-spacing: 2px; }
+h1 { margin: 14px 0 10px; font: 800 clamp(2.1rem, 5vw, 3.5rem)/1.13 'Manrope', sans-serif; letter-spacing: -1.8px; }
+h1 span { color: var(--purple); }
+.subtitle { margin: 0; color: var(--muted); }
+.billing-control {
+  display: inline-flex; gap: 5px; padding: 5px; margin-top: 26px;
+  background: #eceef5; border-radius: 12px;
+}
+.period-button {
+  border: 0; border-radius: 9px; padding: 10px 15px; cursor: pointer;
+  background: transparent; color: #515d72; font: 700 12px 'DM Sans', sans-serif;
+}
+.period-button.active { color: #fff; background: var(--purple); box-shadow: 0 4px 12px #6048d844; }
+.save { margin-left: 4px; color: #dffcf2; font-size: 9px; }
+.plans { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; align-items: stretch; }
+.card {
+  position: relative; padding: 29px 25px; background: #fff; border: 1px solid var(--line);
+  border-radius: 19px; box-shadow: 0 12px 32px #26335b0d;
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+.card:hover { transform: translateY(-6px); box-shadow: 0 16px 32px rgba(15, 23, 42, .15); }
+.card.popular { border: 2px solid var(--purple); box-shadow: 0 16px 36px #6048d81c; }
+.icon { display: grid; place-items: center; width: 42px; height: 42px; border-radius: 13px; font-size: 23px; margin-bottom: 17px; }
+.starter-icon { color: #5268c9; background: #edf0ff; }
+.pro-icon { color: var(--purple); background: #eeeaff; }
+.team-icon { color: #14866d; background: #e3f7f0; }
+.card h2 { margin: 0 0 7px; font: 800 21px 'Manrope', sans-serif; }
+.description { min-height: 40px; margin: 0 0 20px; color: var(--muted); font-size: 12px; line-height: 1.6; }
+.price-line { display: flex; align-items: baseline; gap: 3px; white-space: nowrap; }
+.currency { align-self: flex-start; margin-top: 7px; font-weight: 700; font-size: 19px; }
+.price { font: 800 39px 'Manrope', sans-serif; letter-spacing: -1.5px; }
+.unit { margin-left: 3px; color: var(--muted); font-size: 11px; }
+.small-note { margin: 2px 0 18px; color: #667187; font-size: 10px; }
+.cta { display: block; padding: 12px 10px; border-radius: 9px; text-align: center; text-decoration: none; font-size: 12px; font-weight: 800; transition: background .2s, transform .2s; }
+.cta:hover { transform: translateY(-2px); }
+.primary { color: white; background: var(--purple); }
+.primary:hover { background: #4f39c4; }
+.secondary { color: #4e3ab8; background: #efedff; }
+.secondary:hover { background: #e3dfff; }
+.rule { height: 1px; margin: 22px 0 18px; background: var(--line); }
+.card h3 { margin: 0; color: #566176; font-size: 10px; text-transform: uppercase; letter-spacing: .8px; }
+ul { list-style: none; margin: 14px 0 0; padding: 0; }
+li { margin: 12px 0; color: #4f5b70; font-size: 11px; }
+.ribbon { position: absolute; top: 17px; right: 16px; padding: 6px 9px; border-radius: 20px; color: white; background: var(--purple); font-size: 8px; font-weight: 800; letter-spacing: .7px; }
+.ribbon.best { background: #14866d; }
+footer { margin-top: 28px; color: #667187; text-align: center; font-size: 10px; }
+button:focus-visible, a:focus-visible { outline: 3px solid #f0a52b; outline-offset: 3px; }
+@media (max-width: 800px) {
+  .plans { grid-template-columns: 1fr; max-width: 520px; margin: auto; }
+  .popular { order: -1; }
+  .description { min-height: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; transition: none !important; }
+  .card:hover, .cta:hover { transform: none; }
+}

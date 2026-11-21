@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Compare Planify Starter, Pro and Team plans.">
+  <title>Planify — Pricing Plans</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <main class="container">
+    <header class="intro">
+      <p class="eyebrow">PLANIFY WORKSPACE</p>
+      <h1>Simple plans. <span>Big possibilities.</span></h1>
+      <p class="subtitle">Choose the right tools for your next great idea.</p>
+      <div class="billing-control" aria-label="Billing period">
+        <button class="period-button active" id="monthly" type="button" aria-pressed="true">Monthly</button>
+        <button class="period-button" id="yearly" type="button" aria-pressed="false">Yearly <span class="save">Save 20%</span></button>
+      </div>
+    </header>
+
+    <section class="plans" aria-label="Pricing plans">
+      <article class="card">
+        <div class="icon starter-icon">✦</div>
+        <h2>Starter</h2>
+        <p class="description">The essentials for personal projects and new ideas.</p>
+        <div class="price-line"><span class="currency">₹</span><span class="price" data-monthly="199" data-yearly="1910">199</span><span class="unit">per month</span></div>
+        <p class="small-note">Billed <span class="billing-word">monthly</span></p>
+        <a class="cta secondary" href="mailto:hello@example.com?subject=Starter%20Plan">Start with Starter</a>
+        <div class="rule"></div>
+        <h3>Plan includes</h3>
+        <ul>
+          <li>✓ 1 personal workspace</li>
+          <li>✓ Up to 5 projects</li>
+          <li>✓ Basic task boards</li>
+          <li>✓ 1 GB file storage</li>
+          <li>✓ Community support</li>
+        </ul>
+      </article>
+
+      <article class="card popular">
+        <span class="ribbon">POPULAR</span>
+        <div class="icon pro-icon">✧</div>
+        <h2>Pro</h2>
+        <p class="description">More power and collaboration for growing teams.</p>
+        <div class="price-line"><span class="currency">₹</span><span class="price" data-monthly="499" data-yearly="4790">499</span><span class="unit">per month</span></div>
+        <p class="small-note">Billed <span class="billing-word">monthly</span></p>
+        <a class="cta primary" href="mailto:hello@example.com?subject=Pro%20Plan">Choose Pro</a>
+        <div class="rule"></div>
+        <h3>Everything in Starter, plus</h3>
+        <ul>
+          <li>✓ Unlimited projects</li>
+          <li>✓ Up to 10 team members</li>
+          <li>✓ Advanced task boards</li>
+          <li>✓ 50 GB file storage</li>
+          <li>✓ Priority email support</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <span class="ribbon best">BEST VALUE</span>
+        <div class="icon team-icon">✺</div>
+        <h2>Team</h2>
+        <p class="description">Flexible tools for teams managing bigger goals.</p>
+        <div class="price-line"><span class="currency">₹</span><span class="price" data-monthly="999" data-yearly="9590">999</span><span class="unit">per month</span></div>
+        <p class="small-note">Billed <span class="billing-word">monthly</span></p>
+        <a class="cta secondary" href="mailto:hello@example.com?subject=Team%20Plan">Choose Team</a>
+        <div class="rule"></div>
+        <h3>Everything in Pro, plus</h3>
+        <ul>
+          <li>✓ Unlimited team members</li>
+          <li>✓ Team roles and permissions</li>
+          <li>✓ Custom reports</li>
+          <li>✓ 200 GB file storage</li>
+          <li>✓ Dedicated support</li>
+        </ul>
+      </article>
+    </section>
+    <footer>Planify is a sample project. All prices and plans are fictional.</footer>
+  </main>
+</body>
+</html>
